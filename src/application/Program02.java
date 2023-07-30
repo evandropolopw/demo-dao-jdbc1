@@ -41,6 +41,13 @@ public class Program02 {
 		sellerDao.insert(newSeller);
 		System.out.println("Inserted! New id = " + newSeller.getId());
 		
+		System.out.println("\n=== TEST 5: Seller Upated ===");
+		seller = sellerDao.findById(10);
+		seller.setName("Lilly");
+		seller.setEmail("lilly@gmail.com");
+		sellerDao.update(seller);
+		System.out.println("Updated completed!");
+		
 	}
 
 }
